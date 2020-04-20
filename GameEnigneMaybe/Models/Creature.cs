@@ -4,7 +4,7 @@ using System.Text;
 
 namespace GameEnigneMaybe
 {
-    class Creature: LivingEntity
+    public class Creature: LivingEntity
     {
         public int MinimumDamage { get; set; }
         public int MaximumDamage { get; set; }

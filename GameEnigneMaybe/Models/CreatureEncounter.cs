@@ -4,7 +4,7 @@ using System.Text;
 
 namespace GameEnigneMaybe.Models
 {
-    class CreatureEncounter
+    public class CreatureEncounter
     {
         public int CreatureId { get; set; }
         public int EncounterChance { get; set; }

@@ -8,13 +8,18 @@ namespace GameEnigneMaybe.Models
     {
 
          public int ArmorScore { get; set; }
-         public int ArmorWeight { get; set; }
+         public double ArmorWeight { get; set; }
 
-        public Armor(int typeId, string name, int price, int armorScore, int armorWeight ) : base(typeId, name, price, true)
+        public Armor(int typeId, string name, int price, int armorScore, double armorWeight ) : base(typeId, name, price, true)
             {
                 ArmorScore = armorScore;
                 ArmorWeight = armorWeight;
             }
 
+
+        public new Armor Clone()
+        {
+            return new Armor(TypeID, Name, Price, ArmorScore, ArmorWeight);
+        }
     }
 }

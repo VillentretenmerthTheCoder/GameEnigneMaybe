@@ -109,12 +109,5 @@ namespace GameEnigneMaybe
                 }
             }
         }
-
-        //private void RaiseOnKilledEvent()
-        //{
-        //    OnKilled?.Invoke(this, new System.EventArgs());
-        //}
-
-
     }
 }

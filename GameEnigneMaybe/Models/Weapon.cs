@@ -9,9 +9,9 @@ namespace GameEnigneMaybe.Models
    
         public int MaximumDamage { get; set; }
         public int MinimumDamage { get; set; }    
-        public int WeaponWeight { get; set; }
+        public double WeaponWeight { get; set; }
 
-        public Weapon(int typeID, string name, int price, int minDamage, int maxDamage, int weaponWeight)
+        public Weapon(int typeID, string name, int price, int minDamage, int maxDamage, double weaponWeight)
         : base(typeID, name, price, true)
         {
             MaximumDamage = maxDamage;

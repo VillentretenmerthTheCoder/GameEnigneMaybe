@@ -7,17 +7,18 @@ using GameEnigneMaybe.Models;
 
 namespace GameEnigneMaybe.Models
 {
-    class Location
+   public class Location
     {
         public int XCoordinate { get; set; }
         public int YCoordinate { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public List<Quest> QuestsAvaliable { get; set; }
+        public List<Quest> QuestsAvailable { get; set; }
         
         public List<CreatureEncounter> CreatureInLocation { get; set; }
         public Trader TraderAtLocation { get; set; }
 
+        
         public void AddCreature(int creatureId, int chanceofEncountering)
         {
             if(CreatureInLocation.Exists(i => i.CreatureId == creatureId))

@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace GameEnigneMaybe
+namespace GameEnigneMaybe.Models
 {
-    class NPC: LivingEntity
+    class PotionCategories
     {
+        
     }
 }
