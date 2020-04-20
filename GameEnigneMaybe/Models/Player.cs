@@ -47,5 +47,9 @@ namespace GameEnigneMaybe
             return true;
         }
 
+        public void GetExperience(int amount)
+        {
+            Experience += amount;
+        }
     }
 }

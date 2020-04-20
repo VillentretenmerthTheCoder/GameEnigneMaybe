@@ -43,6 +43,17 @@ namespace GameEnigneMaybe
             }
         }
 
+        public void IncreaseHealth(int amount)
+        {
+            if(!IsDead)
+            {
+                MaximumHitPoints += amount;
+            }
+        }
+
+    
+
+
         public void Heal(int hitPointsToHeal)
         {
             CurrentHitPoints += hitPointsToHeal;
@@ -50,6 +61,33 @@ namespace GameEnigneMaybe
             if (CurrentHitPoints > MaximumHitPoints)
             {
                 CurrentHitPoints = MaximumHitPoints;
+            }
+        }
+
+        //StateMachine
+        public void UsePotion(LivingEntity target, Potion potion)
+        {
+            Player player;
+            
+            if(potion.PotionType == Potion._potionType.Healing)
+            {
+                target.Heal(potion.PotionScore);
+            }
+            if (potion.PotionType == Potion._potionType.Posion);
+            {
+                target.TakeDamage(potion.PotionScore);
+            }
+            if(potion.PotionType == Potion._potionType.Golden)
+            {
+                target.ReceiveGold(potion.PotionScore);
+            }
+            if (potion.PotionType == Potion._potionType.Fortify)
+            {
+                target.IncreaseHealth(potion.PotionScore);
+            }
+            if (potion.PotionType == Potion._potionType.Experience && target.GetType() == typeof(Player))
+            {
+                (target as Player).GetExperience(potion.PotionScore);
             }
         }
 
